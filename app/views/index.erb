@@ -8,24 +8,30 @@
             <input type="range" name="points" id="points" value="50" min="0" max="100">
             <input type="submit" class = "btn btn-success" data-inline="true" value="Submit">
           </div>
-        </form>
       </div>
     </div>
     <div class="row">
       <div class="span5 offset1">
-        <img class="row-margin" src=<%= DEFAULT_IMAGE_URL %> alt="face">
+        <img class="row-margin" src=<%= @picture_one.url_link %> alt="face">
+        <input type="hidden" name="picture_one_id" value="<%= @picture_one.id %>">
       </div>
       <div class="span5 offset1">
-        <img src=<%= DEFAULT_IMAGE_URL %> alt="face">
+        <img src=<%= @picture_two.url_link %> alt="face">
+        <input type="hidden" name="picture_two_id" value="<%= @picture_two.id %>">
       </div>
     </div>
+    </form>
   </div>
 </div>
 
 
-<% @random = rand(0...9) %>
-<% @result = @face['items'][@random]['link'] %>
-<img src = "<%= @result %>" />
+<% 
+=begin %> 
+<%= erb :random_pic %> 
+
+<% 
+=end %>
+
 
 
 

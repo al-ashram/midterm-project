@@ -1,11 +1,6 @@
-.main img {
-  height: 200px;
-  width: 200px;
-}
 
-.play img {
-  height: 400px;
-  width: 400px;
+img {
+  max-width:100%;
 }
 .row-margin {
   margin-bottom: 20px; 
