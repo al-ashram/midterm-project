@@ -1,1 +1,5 @@
-<img src = "<%= @face['items'][0]['link'] %> " />
+<% @random = rand(0...9) %>
+<% @result = @face['items'][@random]['link'] %>
+<img src = "<%= @result %>" />
+
+<%= @matching %>
