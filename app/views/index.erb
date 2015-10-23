@@ -22,3 +22,10 @@
   </div>
 </div>
 
+
+<% @random = rand(0...9) %>
+<% @result = @face['items'][@random]['link'] %>
+<img src = "<%= @result %>" />
+
+
+
