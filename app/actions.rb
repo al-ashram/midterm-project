@@ -3,8 +3,8 @@ DEFAULT_IMAGE_URL = "https://s3.amazonaws.com/37assets/svn/765-default-avatar.pn
 
   def grab_random_pic
   pictures = Picture.order("Random()").limit(2)
-   @picture_one = pictures[0]
-   @picture_two = pictures[1]
+   @picture_one = pictures[0] || Picture.new(url_link:DEFAULT_IMAGE_URL)
+   @picture_two = pictures[1] || Picture.new(url_link:DEFAULT_IMAGE_URL)
    #binding.pry
    # @picture_one = Picture.order("Random()").first
    #  loop do
