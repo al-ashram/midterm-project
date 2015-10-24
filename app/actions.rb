@@ -1,4 +1,7 @@
+# imgurClient = Imgur.new()
+
 DEFAULT_IMAGE_URL = "https://s3.amazonaws.com/37assets/svn/765-default-avatar.png"
+
 
 
   def grab_random_pic
@@ -65,11 +68,15 @@ get '/upload_page' do
 end
 
 post '/upload_page' do
-  @upload_url_1 = params[:upload_url_1]
+  binding.pry
+  @img_path = params[:upload_url_1][:tempfile].path
+  @img = Imgur::LocalImage.new(@img_path)
+  @img_url = imgurClient.upload(@img).link
+  # @upload_url_1 = params[:upload_url_1]
   # @upload_url_2 = params[:upload_url_2]
-  @current_url_1 = @upload_url_1
+  @current_url_1 = @img_url
   # @current_url_2 = @upload_url_2
-  @picture = Picture.new(url_link: @upload_url_1)
+  @picture = Picture.new(url_link: @img_url)
 
   if @picture.save
     @success_message = "picture uploaded successfully!"
