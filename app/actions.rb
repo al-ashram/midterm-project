@@ -30,7 +30,16 @@ post '/submit' do
   @score = params[:points]
   @picture_one_id = params[:picture_one_id]
   @picture_two_id = params[:picture_two_id]
-  @pair = Pair.new(picture_one_id: @picture_one_id, picture_two_id: @picture_two_id, score: @score, vote_count: 1)
+  # Find if the pair of picture_one and picture_two is already in the pairs table
+  if @pair = Pair.find_by("(picture_one_id =? AND picture_two_id =?) OR (picture_one_id =? AND picture_two_id =?)", params[:picture_one_id], params[:picture_two_id], params[:picture_two_id],params[:picture_one_id])
+    old_score = @pair.score.to_f
+    old_count = @pair[:vote_count].to_f
+    new_count = (old_count + 1) 
+    new_score = (old_score * old_count + @score.to_f)/(new_count)
+    @pair.update(score: new_score, vote_count: new_count)
+  else
+    @pair = Pair.new(picture_one_id: @picture_one_id, picture_two_id: @picture_two_id, score: @score, vote_count: 1)
+  end
   if @pair.save
     redirect '/'
   else
