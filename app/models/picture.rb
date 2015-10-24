@@ -1,5 +1,6 @@
 class Picture < ActiveRecord::Base
-  validates :url_link, uniqueness: true, format:{with:/\Ahttps?:\/\/(?:[a-z\-]+\.)+[a-z]{2,6}(?:\/[^\/#?]+)+\.((?:jpe?g|gif|png)|(?:JPE?G|GIF|PNG))\z/, message: "Please upload a valid image URL" }
+  validates :url_link, uniqueness: true, format:{with:/https?:.+\.((?:jpe?g|gif|png)|(?:JPE?G|GIF|PNG))/, message: "Please upload a valid image URL" }
+  
   def pairs
     Pair.by_picture(self.id)
   end 

@@ -1,0 +1,54 @@
+<% 
+=begin %>
+
+
+<div class="hero-unit main">
+  <div class="container">
+    <table class="admin-table"> 
+      <tr>
+        <th class="first-column">ID</th>
+        <th>Picture</th>
+      </tr>
+      <% @all_pictures.each do |picture| %>
+        <tr>
+          <td><%= picture.id %></td>
+          <td><img src="<%= picture.url_link %>" alt="face picture"></td>
+        </tr>
+      <% end %> 
+    </table> 
+  </div>
+</div>
+
+
+<%
+=end
+%>
+
+
+<div class="hero-unit main">
+  <div class="container">
+    <table class="admin-table"> 
+      <tr>
+        <th>Pair ID</th>
+        <th>ID</th>
+        <th>First Picture</th>
+        <th>ID</th>
+        <th>Second Picture</th>
+        <th>Percent Match</th>
+      </tr>
+      <% @all_pairs.each do |pair| %>
+        <tr>
+          <td><%= pair.id %></td>
+          <td><%= pair.picture_one.id %></td>
+          <td><img src=<%= pair.picture_one.url_link %> alt="face picture"></td>
+          <td><%= pair.picture_two.id %></td>
+          <td><img src=<%= pair.picture_two.url_link %> alt="face picture"></td>
+          <td><%= pair.score %></td>
+        </tr>
+      <% end %>
+    </table> 
+  </div>
+</div>
+
+
+

@@ -71,4 +71,10 @@ post '/upload_page' do
   end
 end
 
+get "/admin" do
+  @all_pictures = Picture.all
+  @all_pairs = Pair.all
+  erb :admin
+end
+
 

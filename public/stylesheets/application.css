@@ -6,3 +6,10 @@ img {
   margin-bottom: 20px; 
 }
 
+.admin-table img {
+  max-height: 100px;
+}
+
+.first-column {
+  width: 100px;
+}
