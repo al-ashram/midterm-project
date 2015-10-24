@@ -12,10 +12,12 @@
     </div>
     <div class="row">
       <div class="span5 offset1">
+        <p> <%=@picture_one.id %> </p>
         <img class="row-margin" src=<%= @picture_one.url_link %> alt="face">
         <input type="hidden" name="picture_one_id" value="<%= @picture_one.id %>">
       </div>
       <div class="span5 offset1">
+       <p> <%=@picture_two.id %> </p>
         <img src=<%= @picture_two.url_link %> alt="face">
         <input type="hidden" name="picture_two_id" value="<%= @picture_two.id %>">
       </div>
