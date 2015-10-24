@@ -1,17 +1,66 @@
 DEFAULT_IMAGE_URL = "https://s3.amazonaws.com/37assets/svn/765-default-avatar.png"
 
 
-  def grab_random_pic
-  pictures = Picture.order("Random()").limit(2)
-   @picture_one = pictures[0] || Picture.new(url_link:DEFAULT_IMAGE_URL)
-   @picture_two = pictures[1] || Picture.new(url_link:DEFAULT_IMAGE_URL)
-   #binding.pry
-   # @picture_one = Picture.order("Random()").first
-   #  loop do
-   #   @picture_two = Picture.order("Random()").first
-   #   break if @picture_two.id != @picture_one.id
-   #  end
+def get_all_urls
+  @url_array = Array.new
+  Picture.all.each do |image|
+    @url_array.push(image.url_link)
   end
+end 
+
+# def get_all_urls
+# @url_array = [
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/2/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/83/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/50/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/54/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/47/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/51/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/42/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/43/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/67/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/9/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/26/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/30/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/84/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/13/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/41/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/82/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/5/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/1352860597/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/477718320/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/25/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/10/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/21/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/36/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/33/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/2107379463/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/55/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/812943674/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/1646223231/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/34/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/811416297/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/604978379/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/71/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/23/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/8/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/24/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/38/icons/large.png',
+#   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/1380041935/icons/large.png',
+# ]
+# end
+
+def grab_random_pic
+pictures = Picture.order("Random()").limit(2)
+ @picture_one = pictures[0] || Picture.new(url_link:DEFAULT_IMAGE_URL)
+ @picture_two = pictures[1] || Picture.new(url_link:DEFAULT_IMAGE_URL)
+ #binding.pry
+ # @picture_one = Picture.order("Random()").first
+ #  loop do
+ #   @picture_two = Picture.order("Random()").first
+ #   break if @picture_two.id != @picture_one.id
+ #  end
+end
 
 
 # Homepage (Root path)
@@ -19,7 +68,8 @@ get '/' do
   # @random_index = rand(30)
   # @face = HTTParty.get("https://www.googleapis.com/customsearch/v1?key=AIzaSyAcwfwtxSfmJpGHn17ZgWD9cPfmh57q51w&cx=008706594706571137855:earcvruiqoc&safe=medium&q=face&searchType=image&start=#{@random_index}")
   grab_random_pic
-  erb :index
+  get_all_urls
+  erb :slot_machine
 end
 
 get '/play' do
@@ -30,6 +80,7 @@ post '/submit' do
   @score = params[:points]
   @picture_one_id = params[:picture_one_id]
   @picture_two_id = params[:picture_two_id]
+  binding.pry
   # Find if the pair of picture_one and picture_two is already in the pairs table
   if @pair = Pair.find_by("(picture_one_id =? AND picture_two_id =?) OR (picture_one_id =? AND picture_two_id =?)", params[:picture_one_id], params[:picture_two_id], params[:picture_two_id],params[:picture_one_id])
     old_score = @pair.score.to_f
