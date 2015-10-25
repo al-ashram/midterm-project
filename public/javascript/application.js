@@ -1,117 +1,15 @@
-$(document).ready(function() {
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
-});
+
+
+// $(document).ready(function() {
+
+//   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+// });
 
 
 // IFTTT Slottt Machine by Jen Hamon
 // jen@ifttt.com
 // github.com/jhamon
-
-// var triggers = [
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/13/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/42/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/83/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/54/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/50/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/47/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/61/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/24/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/36/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/1527317548/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/72/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/64/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/25/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/10/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/21/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/33/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/2107379463/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/28/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/1515512761/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/1646223231/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/34/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/37/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/2092498048/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/811416297/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/604978379/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/1523147690/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/23/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/8/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/38/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/1352860597/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/5/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/82/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/41/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/891279159/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/89/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/2/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/84/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/15/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/7/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/30/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/32/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/26/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/20588782/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/9/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/3/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/12/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/67/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/43/icons/large.png',
-// ]
-
-// var triggers = <%= @url_array %>
-// var actions = <%= @url_array %>
-
-// var triggers = JSON.parse( "<%= @url_array.to_json %>" );
-// var actions = JSON.parse( "<%= @url_array.to_json %>" );
-
-// var triggers = #{raw @url_array}
-
-// var actions = #{raw @url_array}
-
-// var actions = "<%= @url_array%>"
-// var actions = "<%= @url_array%>"
-
-
-// var actions = [
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/2/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/83/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/50/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/54/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/47/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/51/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/42/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/43/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/67/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/9/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/26/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/30/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/84/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/13/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/41/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/82/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/5/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/1352860597/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/477718320/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/25/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/10/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/21/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/36/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/33/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/2107379463/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/55/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/812943674/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/1646223231/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/34/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/811416297/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/604978379/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/71/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/23/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/8/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/24/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/38/icons/large.png',
-//   'https://d3rnbxvnd0hlox.cloudfront.net/images/channels/1380041935/icons/large.png',
-// ]
 
 function buildSlotItem (imgURL) {
     return $('<div>').addClass('slottt-machine-recipe__item')
