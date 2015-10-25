@@ -1,4 +1,5 @@
-# imgurClient = Imgur.new()
+imgurClient = Imgur.new('c7d3f45cb9049a2')
+# fd801fc72649f490aba44fe44cfaa5ca248f81a8
 
 DEFAULT_IMAGE_URL = "https://s3.amazonaws.com/37assets/svn/765-default-avatar.png"
 
@@ -68,16 +69,24 @@ get '/upload_page' do
 end
 
 post '/upload_page' do
-  binding.pry
-  @img_path = params[:upload_url_1][:tempfile].path
-  @img = Imgur::LocalImage.new(@img_path)
-  @img_url = imgurClient.upload(@img).link
-  # @upload_url_1 = params[:upload_url_1]
-  # @upload_url_2 = params[:upload_url_2]
-  @current_url_1 = @img_url
-  # @current_url_2 = @upload_url_2
-  @picture = Picture.new(url_link: @img_url)
 
+#User can upload image either from their local hdd or URL
+  if params[:upload_local_file].nil?
+    if params[:upload_url].nil?
+      'BOTH R EMPTY'
+    else
+      @upload_url = params[:upload_url]
+      @current_url_1 = @upload_url
+      @picture = Picture.new(url_link: @upload_url)
+    end
+  else
+    @img_path = params[:upload_local_file][:tempfile].path
+    @img = Imgur::LocalImage.new(@img_path)
+    @img_url = imgurClient.upload(@img).link
+    @current_url_1 = @img_url
+    @picture = Picture.new(url_link: @img_url)
+  end
+ 
   if @picture.save
     @success_message = "picture uploaded successfully!"
     erb :upload
@@ -85,6 +94,7 @@ post '/upload_page' do
     @current_url_1 = DEFAULT_IMAGE_URL
     erb :upload
   end
+
 end
 
 get "/admin" do

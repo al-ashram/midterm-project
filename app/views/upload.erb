@@ -35,9 +35,9 @@
     </div>
     <div class="row">
       <div class="span5 offset1">
-        <form method="post" aciton="/upload_pic_1">
-          <input type="file" name="upload_url_1" accept="image/*"/>
-          <!-- <input type="text" required name="upload_url_1" value="<%= @upload_url_1 %>"> -->
+        <form method="post" action="/upload_page" enctype='multipart/form-data'>
+          <input type="file" name="upload_local_file" accept="image/*">
+          <input type="text" name="upload_url" value="<%= @upload_url %>">
           <input class="btn btn-success" type="submit" value="Upload">
         </form>
       </div>
