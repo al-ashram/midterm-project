@@ -64,6 +64,8 @@ post '/submit' do
 end
 
 get '/top_picks' do
+  @pair = Pair.all
+  @top_five= @pair.order("score DESC").limit(5)
   erb :top_picks
 end
 

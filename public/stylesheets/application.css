@@ -1,3 +1,11 @@
+#table img {
+  width: 100px;
+}
+
+.topfive-table img {
+  max-height: 200px;
+}
+
 .super {
     height: 100%;
 }
