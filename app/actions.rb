@@ -28,6 +28,11 @@ get '/' do
   # @face = HTTParty.get("https://www.googleapis.com/customsearch/v1?key=AIzaSyAcwfwtxSfmJpGHn17ZgWD9cPfmh57q51w&cx=008706594706571137855:earcvruiqoc&safe=medium&q=face&searchType=image&start=#{@random_index}")
   grab_random_pic
   get_all_urls
+  # erb :slider
+  erb :slot_machine
+end
+
+get '/slot_machine' do
   erb :slot_machine
 end
 

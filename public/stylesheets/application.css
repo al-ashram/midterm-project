@@ -1,8 +1,48 @@
+.super {
+    height: 100%;
+}
 
+html,
+body {
+    height: 100%;
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+
+
+.carousel-inner {
+    height: 100%;
+}
+
+
+.carousel-indicators > li,
+.carousel-indicators > li.active{
+    width: 100px;
+    height: 25px;
+    border-radius: 0;
+    border: solid 1px grey;
+    background: lightgrey;
+    text-indent: 0;
+}
+.carousel-indicators > li.active {
+    background: white;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+}
+
+/*
 img {
   max-height:100px;
   max-width:100px;
-}
+}*/
 
 /*
 
