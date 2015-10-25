@@ -1,0 +1,52 @@
+<script src="/javascript/application.js"></script>
+<script>
+  var triggers = <%= @url_array %>;
+  var actions = <%= @url_array %>;
+</script>
+
+
+<!-- <div class='container'>
+  <div class='slottt-machine-recipe'>
+    <span class='recipe_if'>if</span>
+    <div class='slottt-machine-recipe__mask' id='trigger_slot'>
+      <div class='slottt-machine-recipe__items_container'></div>
+    </div>
+  </div>
+</div> -->
+<form class="form-inline" id="picform" method="post">
+          <div class="form-group">
+            <label for="points">Match %</label>
+            <input type="range" name="points" id="points" value="50" min="0" max="100">
+            <input type="submit" class = "btn btn-success" data-inline="true" value="Submit">
+          </div>
+  
+
+<div class='container'>
+
+  <div class='slottt-machine-recipe'>
+    <span class='recipe_if'>if</span>
+    <div class='slottt-machine-recipe__mask' id='trigger_slot'>
+      <div class='slottt-machine-recipe__items_container'></div>
+    </div>
+    <span class='recipe_then'>then</span>
+    <div class='slottt-machine-recipe__mask' id='action_slot'>
+      <div class='slottt-machine-recipe__items_container'></div>
+    </div>
+
+
+  </div>
+
+          <div id="equation" class="done">
+          <span class="drink" ></span>
+          <div id="shoulder"><div id="arm"></div></div>
+        </div>
+
+  <input class="btn" id="animatebtn" value="Roll"></input>
+<!--   <input class="btn"  value="Submit"></input> -->
+</div>
+
+</form>
+
+
+
+

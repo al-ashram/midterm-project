@@ -1,0 +1,16 @@
+<table id="table" class="display" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Pic ID</th>
+      <th>Picture</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @all_pictures.each do |picture| %>
+      <tr>
+        <td><%= picture.id %></td>
+        <td><img src=<%= picture.url_link %> alt="face picture"></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
