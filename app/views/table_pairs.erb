@@ -1,0 +1,26 @@
+
+
+<table id="table" class="display" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Pair ID</th>
+      <th>Pic 1 ID</th>
+      <th>Picture 1</th>
+      <th>Pic 2 ID</th>
+      <th>Picture 2</th>
+      <th>Percent Match</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @all_pairs.each do |pair| %>
+      <tr>
+        <td><%= pair.id %></td>
+        <td><%= pair.picture_one.id %></td>
+        <td><img src=<%= pair.picture_one.url_link %> alt="face picture"></td>
+        <td><%= pair.picture_two.id %></td>
+        <td><img src=<%= pair.picture_two.url_link %> alt="face picture"></td>
+        <td><%= pair.score %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

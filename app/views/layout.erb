@@ -1,19 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="/stylesheets/application.css">
-  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/javascript/application.js"></script>
-  <script src="/javascript/bootstrap.js"></script>
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css"> 
+  <link rel="stylesheet" href="/stylesheets/slot_bar.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/application.css"> 
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.9/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
+
+   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+
+  <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.9/js/dataTables.bootstrap.min.js"></script>
+  <script src="/javascript/table.js"></script>
+  <script src="/javascript/slot_bar.js"></script> 
+  <script src="/javascript/application.js"></script> 
+
+
+  <!--  IGNORE FOR SUUUUUREE!!! -->
+<!--   // <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
    <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+   <!--   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+   <!--   // <script src="/javascript/bootstrap.js"></script> -->
+   <!-- XXXXXXXXXXXXXXXXXXXXXXX -->
 
   <title></title>
 </head>
 <body>
-  <%= erb :nav_bar %>
-  <%= yield %>
+
+<%= erb :nav_bar %> 
+
+<!-- <div align="center" class="super"> -->
+
+
+  <div class="container">
+    <%= yield %>
+  </div>
+
+
+
+ 
 </body>
 </html>

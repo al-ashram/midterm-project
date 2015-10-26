@@ -53,11 +53,11 @@ function animate() {
   actionIndex = randomSlotttIndex(actions.length);
 
 
-  $trigger.animate({top: -triggerIndex*500}, 500, 'swing', function () {
+  $trigger.animate({top: -triggerIndex*150}, 500, 'swing', function () {
      rotateContents($trigger, triggerIndex);
   });
 
-  $action.animate({top: -actionIndex*500}, 700, 'swing', function () {
+  $action.animate({top: -actionIndex*150}, 700, 'swing', function () {
     rotateContents($action, actionIndex);
   });
 }

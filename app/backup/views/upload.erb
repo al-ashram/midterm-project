@@ -16,34 +16,36 @@
   <div class="container">
     <div class="row">
       <div data-role="main" class="ui-content span5 offset4">
-
+        <!-- <form class="form-inline" method="post"  action="/submit">
+          <div class="form-group">
+            <label for="points">Match %</label>
+            <input type="range" name="points" id="points" value="50" min="0" max="100">
+            <input type="submit" class = "btn btn-success" data-inline="true" value="Submit">
+          </div>
+        </form> -->
       </div>
     </div>
     <div class="row">
       <div class="span5 offset1">
         <img class="row-margin" src=<%= @current_url_1 %> alt="face">
       </div>
-
+<!--       <div class="span5 offset1">
+        <img src=<%= @current_url_2 %> alt="face">
+      </div> -->
     </div>
-  <div class="row">
-      <div class="span5 offset1">
-        <form method="post" action="/upload_page" enctype='multipart/form-data'>
-          <input type="file" name="upload_local_file" accept="image/*">
-          <input type="text" name="upload_url" value="<%= @upload_url %>">
-          <input class="btn btn-success" type="submit" value="Upload">
-        </form>
-      </div>
-
-
-    
-<!--     <div class="row">
+    <div class="row">
       <div class="span5 offset1">
         <form method="post" aciton="/upload_pic_1">
           <input type="text" required name="upload_url_1" value="<%= @upload_url_1 %>">
           <input class="btn btn-success" type="submit" value="Upload">
         </form>
+      </div>
+ <!--      <div class="span4 offset3">
+        <form method="post" aciton="/upload_pic_2">
+          <input type="url" required name="upload_url_2" value="<%= @upload_url_2 %>">
+          <input class="btn btn-success" type="submit" value="Upload">
+        </form>
       </div> -->
-
     </div>
   </div>
 </div>

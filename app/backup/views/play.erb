@@ -1,6 +1,4 @@
-
-
-
+<div class="hero-unit play">
   <div class="container">
     <div class="row">
       <div data-role="main" class="ui-content span5 offset4">
@@ -10,32 +8,17 @@
             <input type="range" name="points" id="points" value="50" min="0" max="100">
             <input type="submit" class = "btn btn-success" data-inline="true" value="Submit">
           </div>
+        </form>
       </div>
     </div>
     <div class="row">
       <div class="span5 offset1">
-        <p> <%=@picture_one.id %> </p>
-        <img class="row-margin" src=<%= @picture_one.url_link %> alt="face">
-        <input type="hidden" name="picture_one_id" value="<%= @picture_one.id %>">
+        <img class="row-margin" src=<%= DEFAULT_IMAGE_URL %> alt="face">
       </div>
       <div class="span5 offset1">
-       <p> <%=@picture_two.id %> </p>
-        <img src=<%= @picture_two.url_link %> alt="face">
-        <input type="hidden" name="picture_two_id" value="<%= @picture_two.id %>">
+        <img src=<%= DEFAULT_IMAGE_URL %> alt="face">
       </div>
     </div>
-    </form>
   </div>
-
-
-
-<% 
-=begin %> 
-<%= erb :random_pic %> 
-
-<% 
-=end %>
-
-
-
+</div>
 

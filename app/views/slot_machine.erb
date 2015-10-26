@@ -1,0 +1,64 @@
+
+<script>
+  var triggers = <%= @url_array %>;
+  var actions = <%= @url_array %>;
+</script>
+
+
+<!-- <div class='container'>
+  <div class='slottt-machine-recipe'>
+    <span class='recipe_if'>if</span>
+    <div class='slottt-machine-recipe__mask' id='trigger_slot'>
+      <div class='slottt-machine-recipe__items_container'></div>
+    </div>
+  </div>
+</div> -->
+
+<form class="form-inline" id="picform" method="post">
+
+
+  
+
+<!-- <div class='container'> -->
+  <div class='row'>
+    <div class="col-sm-12">
+      <div class='slottt-machine-recipe'>
+        <div class="col-sm-5">
+          <div class='slottt-machine-recipe__mask' id='trigger_slot'>
+            <div class='slottt-machine-recipe__items_container'>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-offset-1">
+          <div class='slottt-machine-recipe__mask' id='action_slot'>
+            <div class='slottt-machine-recipe__items_container'>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1">
+       <div id="equation" class="done"><span class="drink" ></span>
+          <div id="shoulder">
+            <div id="arm">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" align="center">
+    <div class="form-group">
+      <label for="points">Match %</label>
+      <input type="range" name="points" id="points" value="50" min="0" max="100" oninput="this.form.out_points.value = this.value">
+      <input type ="number" name="out_points" min="0" max="100" value="50" oninput = "this.form.points.value=this.value">
+      <input type="submit" class = "btn btn-success" data-inline="true" value="Submit">
+    </div>
+  </div>
+
+
+</form>
+
+
+
+
