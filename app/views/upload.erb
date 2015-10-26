@@ -20,16 +20,14 @@
   <div class="container">
     <div class="row">
       <div data-role="main" class="ui-content span5 offset4">
-
       </div>
     </div>
     <div class="row">
       <div class="span5 offset1">
         <img class="row-margin" id="upload_image" src=<%= @current_url_1 %> alt="face">
       </div>
-
     </div>
-  <div class="row">
+    <div class="row">
       <div class="span5 offset1">
         <form method="post" action="/upload_page" enctype='multipart/form-data'>
           <input type="file" name="upload_local_file" accept="image/*">
@@ -37,17 +35,6 @@
           <input class="btn btn-danger" type="submit" value="Upload">
         </form>
       </div>
-
-
-    
-<!--     <div class="row">
-      <div class="span5 offset1">
-        <form method="post" aciton="/upload_pic_1">
-          <input type="text" required name="upload_url_1" value="<%= @upload_url_1 %>">
-          <input class="btn btn-success" type="submit" value="Upload">
-        </form>
-      </div> -->
-
     </div>
   </div>
 </div>

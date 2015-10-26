@@ -27,33 +27,23 @@ body {
     height: 100%;
 }
 
-
-
 .carousel-inner {
     height: 100%;
 }
-
 
 .carousel-indicators > li,
 .carousel-indicators > li.active{
     width: 150px;
     height: 25px;
     border-radius: 0;
-/*    border: solid 1px grey;*/
-    /*background: lightgrey;*/
     text-indent: 0;
     font-size: 30px;
-
 }
+
 .carousel-indicators > li.active,
 .carousel-indicators > li:hover{
-/*    background: white;*/
     text-decoration: underline;
 }
-
-/*.carousel-indicators > li:hover {
-  text-decoration: underline;
-}*/
 
 iframe {
   height: 90%;
@@ -67,7 +57,6 @@ iframe {
 }
 
 .table{
-  /*cell-spacing:0; */
   width:80%;
 }
 
@@ -84,54 +73,11 @@ th{
   border-right: 1px solid #000;
 }
 
-
-
-/*
-img {
-  max-height:100px;
-  max-width:100px;
-}*/
-
-/*
-
-.row-margin {
-  margin-bottom: 20px; 
-}
-
-.admin-table img {
-  max-height: 100px;
-}
-
-.first-column {
-  width: 100px;
-}*/
-
-
-/*
-slot machine shit
-*/
- 
-
- /*conflict with bootstrap!!!! 
-.container {
-  width: 100%;
-  position: relative;
-  top: 0;
-  bottom: 0;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-*/
-
 /* controls the frame that is shown on top */
 .slottt-machine-recipe {
   margin: 0px auto;
-/*  min-width: 700px;*/
   transform: scale(.8);
   margin-top: 40px;
-
 }
 
 /* controls the frame that is shown on top */
@@ -163,26 +109,6 @@ slot machine shit
     background-repeat: no-repeat;
 }
 
-
 .main-theme-font {
   font-family: 'Gloria Hallelujah', cursive;
 }
-
-
-/* Typography */
-
-/*body {
-  font-family: Helvetica, Arial, sans serif;
-  overflow: hidden;
-}
-
-.tagline {
-  font-weight: normal;
-  font-size: 24px;
-}
-
-a {
- font-weight: bold;
- text-decoration: none;
- color: #33CCFF;
-}*/

@@ -2,22 +2,6 @@ $(document).ready(function() {
    $('.carousel').carousel('pause');
 });
 
-function myFunction() {
-    swal("Good job!", "You clicked the button!", "success")
-}
-
-
-
-// $(document).ready(function() {
-
-//   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
-// });
-
-
-// IFTTT Slottt Machine by Jen Hamon
-// jen@ifttt.com
-// github.com/jhamon
-
 function buildSlotItem (imgURL) {
     return $('<div>').addClass('slottt-machine-recipe__item')
                      .css({'background-image': 'url(' + imgURL + ')'})
@@ -53,15 +37,9 @@ function randomSlotttIndex(max) {
   return (randIndex > 3) ? randIndex : randomSlotttIndex(max);
 }
 
-
 function animate() {
-  // do loop for random
-
-    triggerIndex = randomSlotttIndex(triggers.length);
-    actionIndex = randomSlotttIndex(actions.length);
-
-  
-
+  triggerIndex = randomSlotttIndex(triggers.length);
+  actionIndex = randomSlotttIndex(actions.length);
 
   $trigger.animate({top: -triggerIndex*500}, 500, 'swing', function () {
      rotateContents($trigger, triggerIndex);
@@ -78,42 +56,30 @@ $(function () {
   $action = $('#action_slot .slottt-machine-recipe__items_container');
   buildSlotContents($action, actions);
   
-  // setInterval(animate, 3500);
-  //animate();
   $( "#animatebtn" ).on( "click", function() {
-  animate();
+    animate();
   });
 
   $('#picform').submit(function(event) {
+    // get the form data
+    var formData = {
+        'picture_one_id'              : triggerIndex,
+        'picture_two_id'             : actionIndex,
+        'points'    : $('input[name=points]').val()
+    };
 
-        // get the form data
-        // there are many ways to get this data using jQuery (you can use the class or id also)
-        var formData = {
-            'picture_one_id'              : triggerIndex,
-            'picture_two_id'             : actionIndex,
-            'points'    : $('input[name=points]').val()
-        };
-
-        // process the form
-        $.ajax({
-            type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-            url         : '/submit', // the url where we want to POST
-            data        : formData, // our data object
-            //dataType    : 'json', // what type of data do we expect back from the server
-            //encode          : true
-        })
-            // using the done promise callback
-            .done(function(data) {
-
-                // log data to the console so we can see
-                console.log(data); 
-
-                // here we will handle errors and validation messages
-            });
-
-        // stop the form from submitting the normal way and refreshing the page
-        event.preventDefault();
+    // process the form
+    $.ajax({
+        type        : 'POST', 
+        url         : '/submit', 
+        data        : formData, 
+    })
+    // using the done promise callback
+    .done(function(data) {
+        console.log(data); 
     });
+    event.preventDefault();
+  });
 
 });
 

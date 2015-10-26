@@ -7,13 +7,13 @@
        <th>Second Picture</th>
        <th>Percent Match</th>
      </tr>
-       <% @top_five.each do |pair| %>    
+      <% @top_five.each do |pair| %>    
        <tr>
          <td> <%= @top_five.index(pair)+1%></td>
          <td><img src=<%= pair.picture_one.url_link %> alt="face picture"></td>
          <td><img src=<%= pair.picture_two.url_link %> alt="face picture"></td>   
          <td><%=@percent = pair.score.round(0) %>%</td>
-       </tr>
+      </tr>
      <% end %>
    </table> 
  </div>
