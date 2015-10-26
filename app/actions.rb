@@ -1,9 +1,6 @@
 DEFAULT_IMAGE_URL = "https://s3.amazonaws.com/37assets/svn/765-default-avatar.png"
 imgurClient = Imgur.new('c7d3f45cb9049a2')
 
-
-
-
   def grab_random_pic
   pictures = Picture.order("Random()").limit(2)
    @picture_one = pictures[0] || Picture.new(url_link:DEFAULT_IMAGE_URL)
@@ -97,7 +94,10 @@ end
 
 post '/upload_page' do
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 36e80356a0d8c74ee02dc6e5596d9fb1c0820029
   if params[:upload_local_file].nil?
     if params[:upload_url].nil?
       'BOTH FIELDS ARE EMPTY'
@@ -113,6 +113,7 @@ post '/upload_page' do
     @current_url_1 = @img_url
     @picture = Picture.new(url_link: @img_url)
   end
+<<<<<<< HEAD
 >>>>>>> 36e80356a0d8c74ee02dc6e5596d9fb1c0820029
 
 #User can upload image either from their local hdd or URL
@@ -132,6 +133,9 @@ post '/upload_page' do
     @picture = Picture.new(url_link: @img_url)
   end
  
+=======
+
+>>>>>>> 36e80356a0d8c74ee02dc6e5596d9fb1c0820029
   if @picture.save
     @success_message = "picture uploaded successfully!"
     erb :upload
