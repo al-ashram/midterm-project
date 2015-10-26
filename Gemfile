@@ -11,6 +11,9 @@ gem 'sinatra-activerecord'
 gem 'puma'
 gem 'tux'
 
+gem 'httparty'
+gem 'imgur-api'
+
 group :development, :test do
   gem 'pry'
   gem 'shotgun'

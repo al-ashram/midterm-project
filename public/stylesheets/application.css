@@ -1,0 +1,114 @@
+#table img {
+  width: 100px;
+}
+
+.topfive-table img {
+  max-height: 200px;
+}
+
+#upload_image {
+  max-width: 500px;
+}
+
+.super {
+    height: 100%; 
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-indicators > li,
+.carousel-indicators > li.active{
+    width: 150px;
+    height: 25px;
+    border-radius: 0;
+    text-indent: 0;
+    font-size: 30px;
+}
+
+.carousel-indicators > li.active,
+.carousel-indicators > li:hover{
+    text-decoration: underline;
+}
+
+iframe {
+  height: 90%;
+  width: 80%;
+  border: 0;
+}
+
+.special {
+  height: 100%;
+  width: 80%;
+}
+
+.table{
+  width:80%;
+}
+
+.small-column {
+  width: 50px;
+}
+
+td,
+th{
+  text-align: center;
+}
+
+.selective-border{
+  border-right: 1px solid #000;
+}
+
+/* controls the frame that is shown on top */
+.slottt-machine-recipe {
+  margin: 0px auto;
+  transform: scale(.8);
+  margin-top: 40px;
+}
+
+/* controls the frame that is shown on top */
+.slottt-machine-recipe__mask {
+    width: 500px;
+    height: 500px;
+    overflow: hidden; 
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: -20px;
+}
+
+/* controls animation of moving picture roll */
+.slottt-machine-recipe__items_container {
+    position: relative;
+}
+
+/* controls hidden alignment of pictures in background */
+.slottt-machine-recipe__item {
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 500px;
+    max-height: 500px;
+    margin: 0px;
+    padding: 0px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.main-theme-font {
+  font-family: 'Gloria Hallelujah', cursive;
+}

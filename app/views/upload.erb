@@ -1,0 +1,41 @@
+<% if @picture.errors.any? %>
+  <div>
+    <ul>
+      <% @picture.errors.full_messages.each do |message| %>
+        <script>
+          swal("<%= message %>","","error");
+        </script>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<% if @success_message %>
+    <script>
+      swal("<%= @success_message %>","","success");
+  </script>
+<% end %>
+
+<div class="hero-unit play">
+  <div class="container">
+    <div class="row">
+      <div data-role="main" class="ui-content span5 offset4">
+      </div>
+    </div>
+    <div class="row">
+      <div class="span5 offset1">
+        <img class="row-margin" id="upload_image" src=<%= @current_url_1 %> alt="face">
+      </div>
+    </div>
+    <div class="row">
+      <div class="span5 offset1">
+        <form method="post" action="/upload_page" enctype='multipart/form-data'>
+          <input type="file" name="upload_local_file" accept="image/*">
+          <input type="text" name="upload_url" value="<%= @upload_url %>">
+          <input class="btn btn-danger" type="submit" value="Upload">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

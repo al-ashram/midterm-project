@@ -1,0 +1,19 @@
+<div class="hero-unit main">
+ <div class="container">
+   <table class="topfive-table"> 
+     <tr>
+       <th>Ranking</th>
+       <th>First Picture</th>
+       <th>Second Picture</th>
+       <th>Percent Match</th>
+     </tr>
+      <% @top_five.each do |pair| %>    
+       <tr>
+         <td> <%= @top_five.index(pair)+1%></td>
+         <td><img src=<%= pair.picture_one.url_link %> alt="face picture"></td>
+         <td><img src=<%= pair.picture_two.url_link %> alt="face picture"></td>   
+         <td><%=@percent = pair.score.round(0) %>%</td>
+      </tr>
+     <% end %>
+   </table> 
+ </div>

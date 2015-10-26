@@ -1,0 +1,35 @@
+<div class="super">
+  <div id="myCarousel" class="carousel slide" interval="off">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active" >Play</li>
+      <li data-target="#myCarousel" data-slide-to="1">Upload</li>
+      <li data-target="#myCarousel" data-slide-to="2">Top 5</li>
+      <li data-target="#myCarousel" data-slide-to="3">Admin</li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+         <div class="special">
+          <%= erb :slot_machine %>
+        </div>
+      </div>
+      <div class="item">
+        <iframe src="/upload_page"></iframe>
+      </div>
+      <div class="item">
+        <iframe src="/top_picks"></iframe>
+      </div>
+      <div class="item">
+        <iframe src="/admin"></iframe>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </a>
+  </div>
+</div>
+
+
+
