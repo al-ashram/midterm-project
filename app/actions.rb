@@ -59,7 +59,6 @@ post '/submit' do
   if @pair.save
     @match_saved = "match saved!"
     redirect '/'
-
   else
     #flash error message
   end
