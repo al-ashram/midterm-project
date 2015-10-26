@@ -1,3 +1,16 @@
+h1{
+  margin-left:140px;
+}
+
+.form-group input[type="number"] {
+  height:30px;
+}
+
+.topfive-table.dataTable{
+  width:80%;
+  margin-right:180px;
+}
+
 #table img {
   width: 100px;
 }

@@ -1,18 +1,15 @@
-
-
-
-  <div class="container">
-    <div class="row">
-      <div data-role="main" class="ui-content span5 offset4">
-        <form class="form-inline" method="post"  action="/submit">
-          <div class="form-group">
-            <label for="points">Match %</label>
-            <input type="range" name="points" id="points" value="50" min="0" max="100">
-            <input type="submit" class = "btn btn-success" data-inline="true" value="Submit">
-          </div>
-      </div>
+<div class="container">
+  <div class="row">
+    <div data-role="main" class="ui-content span5 offset4">
+      <form class="form-inline" method="post"  action="/submit">
+        <div class="form-group">
+          <label for="points">Match %</label>
+          <input type="range" name="points" id="points" value="50" min="0" max="100">
+          <input type="submit" class = "btn btn-success" data-inline="true" value="Submit">
+        </div>
     </div>
-    <div class="row">
+  </div>
+  <div class="row">
       <div class="span5 offset1">
         <p> <%=@picture_one.id %> </p>
         <img class="row-margin" src=<%= @picture_one.url_link %> alt="face">
@@ -23,18 +20,12 @@
         <img src=<%= @picture_two.url_link %> alt="face">
         <input type="hidden" name="picture_two_id" value="<%= @picture_two.id %>">
       </div>
-    </div>
-    </form>
   </div>
+      </form>
+</div>
 
 
 
-<% 
-=begin %> 
-<%= erb :random_pic %> 
-
-<% 
-=end %>
 
 
 
