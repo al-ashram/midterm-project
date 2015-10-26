@@ -7,12 +7,14 @@
 }
 
 .super {
-    height: 100%;
+    height: 100%; 
 }
 
 html,
 body {
     height: 100%;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
 }
 
 .carousel,
@@ -30,21 +32,55 @@ body {
 
 .carousel-indicators > li,
 .carousel-indicators > li.active{
-    width: 100px;
+    width: 150px;
     height: 25px;
     border-radius: 0;
-    border: solid 1px grey;
-    background: lightgrey;
+/*    border: solid 1px grey;*/
+    /*background: lightgrey;*/
     text-indent: 0;
+    font-size: 30px;
+
 }
-.carousel-indicators > li.active {
-    background: white;
+.carousel-indicators > li.active,
+.carousel-indicators > li:hover{
+/*    background: white;*/
+    text-decoration: underline;
 }
 
+/*.carousel-indicators > li:hover {
+  text-decoration: underline;
+}*/
+
 iframe {
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 80%;
+  border: 0;
 }
+
+.special {
+  height: 100%;
+  width: 80%;
+}
+
+.table{
+  /*cell-spacing:0; */
+  width:80%;
+}
+
+.small-column {
+  width: 50px;
+}
+
+td,
+th{
+  text-align: center;
+}
+
+.selective-border{
+  border-right: 1px solid #000;
+}
+
+
 
 /*
 img {
@@ -90,7 +126,8 @@ slot machine shit
   margin: 0px auto;
 /*  min-width: 700px;*/
   transform: scale(.8);
-  margin-top: 50px;
+  margin-top: 40px;
+
 }
 
 /* controls the frame that is shown on top */
@@ -121,6 +158,12 @@ slot machine shit
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+
+.main-theme-font {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
 
 /* Typography */
 

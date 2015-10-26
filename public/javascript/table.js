@@ -17,6 +17,9 @@ $(document).ready(function() {
     "scrollCollapse": true,
     "paging": false,
 
+
+
+
 //search by click!!
 // "initComplete": function () {
 //             var api = this.api();

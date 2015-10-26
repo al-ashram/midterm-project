@@ -5,10 +5,10 @@
 </ul>
 <div class="tab-content">
   <div class="tab-pane active" id="tab_a">
-    <table id="table" class="display" cellspacing="0" width="100%">
+    <table id="table" class="display">
       <thead>
         <tr>
-          <th>Pic ID</th>
+          <th class="small-column">ID</th>
           <th>Picture</th>
         </tr>
       </thead>
@@ -23,26 +23,26 @@
     </table>
   </div>
   <div class="tab-pane" id="tab_b">
-    <table id="table" class="display" cellspacing="0" width="100%">
+    <table id="table" class="display" cellspacing="0">
       <thead>
         <tr>
-          <th>Pair ID</th>
-          <th>Pic 1 ID</th>
+          <th class="small-column selective-border">Pair ID</th>
           <th>Picture 1</th>
-          <th>Pic 2 ID</th>
+          <th class="small-column selective-border">ID</th>
           <th>Picture 2</th>
-          <th>Percent Match</th>
+          <th class="small-column selective-border">ID</th>
+          <th class="small-column">Percent Match</th>
         </tr>
       </thead>
       <tbody>
         <% @all_pairs.each do |pair| %>
           <tr>
-            <td><%= pair.id %></td>
-            <td><%= pair.picture_one.id %></td>
-            <td><img src=<%= pair.picture_one.url_link %> alt="face picture"></td>
-            <td><%= pair.picture_two.id %></td>
-            <td><img src=<%= pair.picture_two.url_link %> alt="face picture"></td>
-            <td><%= pair.score %></td>
+            <td class="selective-border"><%= pair.id %></td>
+            <td ><img src=<%= pair.picture_one.url_link %> alt="face picture"></td>
+            <td class="selective-border"><%= pair.picture_one.id %></td>
+            <td ><img src=<%= pair.picture_two.url_link %> alt="face picture"></td>
+            <td class="selective-border"><%= pair.picture_two.id %></td>
+            <td><%= pair.score.round(0) %>%</td>
           </tr>
         <% end %>
       </tbody>

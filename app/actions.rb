@@ -29,7 +29,7 @@ get '/' do
   grab_random_pic
   get_all_urls
   # erb :slider
-  erb :slot_machine
+  erb :slider
 end
 
 get '/slot_machine' do

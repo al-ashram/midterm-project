@@ -1,3 +1,10 @@
+$(document).ready(function() {      
+   $('.carousel').carousel('pause');
+});
+
+function myFunction() {
+    swal("Good job!", "You clicked the button!", "success")
+}
 
 
 
@@ -49,8 +56,11 @@ function randomSlotttIndex(max) {
 
 function animate() {
   // do loop for random
-  triggerIndex = randomSlotttIndex(triggers.length);
-  actionIndex = randomSlotttIndex(actions.length);
+
+    triggerIndex = randomSlotttIndex(triggers.length);
+    actionIndex = randomSlotttIndex(actions.length);
+
+  
 
 
   $trigger.animate({top: -triggerIndex*500}, 500, 'swing', function () {

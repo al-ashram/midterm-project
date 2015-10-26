@@ -1,4 +1,6 @@
 
+
+
 <script>
   var triggers = <%= @url_array %>;
   var actions = <%= @url_array %>;
@@ -36,7 +38,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-1">
+      <div class="col-sm-1"  >
        <div id="equation" class="done"><span class="drink" ></span>
           <div id="shoulder">
             <div id="arm">
@@ -47,17 +49,24 @@
     </div>
   </div>
 
-  <div class="row" align="center">
+  <div class="row" align="center" >
     <div class="form-group">
       <label for="points">Match %</label>
       <input type="range" name="points" id="points" value="50" min="0" max="100" oninput="this.form.out_points.value = this.value">
       <input type ="number" name="out_points" min="0" max="100" value="50" oninput = "this.form.points.value=this.value">
-      <input type="submit" class = "btn btn-success" data-inline="true" value="Submit">
+      <input type="submit" class ="btn btn-danger" data-inline="true" value="Submit">
+
+
+
+
+
+
     </div>
   </div>
 
-
 </form>
+<!-- <button onclick="myFunction()">Try it</button> -->
+
 
 
 
