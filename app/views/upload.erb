@@ -2,14 +2,18 @@
   <div>
     <ul>
       <% @picture.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
+        <script>
+          swal("<%= message %>","","error");
+        </script>
       <% end %>
     </ul>
   </div>
 <% end %>
 
 <% if @success_message %>
-  <strong><%= @success_message %></strong>
+    <script>
+      swal("<%= @success_message %>","","success");
+  </script>
 <% end %>
 
 <div class="hero-unit play">
@@ -21,7 +25,7 @@
     </div>
     <div class="row">
       <div class="span5 offset1">
-        <img class="row-margin" src=<%= @current_url_1 %> alt="face">
+        <img class="row-margin" id="upload_image" src=<%= @current_url_1 %> alt="face">
       </div>
 
     </div>

@@ -6,6 +6,10 @@
   max-height: 200px;
 }
 
+#upload_image {
+  max-width: 500px;
+}
+
 .super {
     height: 100%; 
 }

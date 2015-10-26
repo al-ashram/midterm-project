@@ -1,5 +1,9 @@
 
-
+<% if @match_saved %>
+    <script>
+      swal("<%= @match_saved %>","","success");
+  </script>
+<% end %>
 
 <script>
   var triggers = <%= @url_array %>;
@@ -65,7 +69,7 @@
   </div>
 
 </form>
-<!-- <button onclick="myFunction()">Try it</button> -->
+
 
 
 

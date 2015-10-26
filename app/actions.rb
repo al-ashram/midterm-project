@@ -29,6 +29,7 @@ get '/' do
   grab_random_pic
   get_all_urls
   # erb :slider
+
   erb :slider
 end
 
@@ -56,7 +57,9 @@ post '/submit' do
     @pair = Pair.new(picture_one_id: @picture_one_id, picture_two_id: @picture_two_id, score: @score, vote_count: 1)
   end
   if @pair.save
+    @match_saved = "match saved!"
     redirect '/'
+
   else
     #flash error message
   end
