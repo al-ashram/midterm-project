@@ -31,7 +31,7 @@
           <th>Picture 1</th>
           <th>Pic 2 ID</th>
           <th>Picture 2</th>
-          <th>Percent Match</th>
+          <th>Percent Match(%)</th>
         </tr>
       </thead>
       <tbody>
@@ -42,7 +42,7 @@
             <td><img src=<%= pair.picture_one.url_link %> alt="face picture"></td>
             <td><%= pair.picture_two.id %></td>
             <td><img src=<%= pair.picture_two.url_link %> alt="face picture"></td>
-            <td><%= pair.score %></td>
+            <td><%= pair.score.round(0) %></td>
           </tr>
         <% end %>
       </tbody>
