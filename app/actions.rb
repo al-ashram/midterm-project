@@ -10,7 +10,7 @@ imgurClient = Imgur.new('c7d3f45cb9049a2')
    #  loop do
    #   @picture_two = Picture.order("Random()").first
    #   break if @picture_two.id != @picture_one.id
-   #  end
+  end
 
 def get_all_urls
   @url_array = Array.new
@@ -93,11 +93,7 @@ get '/upload_page' do
 end
 
 post '/upload_page' do
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 36e80356a0d8c74ee02dc6e5596d9fb1c0820029
+
   if params[:upload_local_file].nil?
     if params[:upload_url].nil?
       'BOTH FIELDS ARE EMPTY'
@@ -113,8 +109,7 @@ post '/upload_page' do
     @current_url_1 = @img_url
     @picture = Picture.new(url_link: @img_url)
   end
-<<<<<<< HEAD
->>>>>>> 36e80356a0d8c74ee02dc6e5596d9fb1c0820029
+
 
 #User can upload image either from their local hdd or URL
   if params[:upload_local_file].nil?
@@ -132,10 +127,8 @@ post '/upload_page' do
     @current_url_1 = @img_url
     @picture = Picture.new(url_link: @img_url)
   end
- 
-=======
 
->>>>>>> 36e80356a0d8c74ee02dc6e5596d9fb1c0820029
+
   if @picture.save
     @success_message = "picture uploaded successfully!"
     erb :upload
@@ -151,5 +144,3 @@ get "/admin" do
   @all_pairs = Pair.all
   erb :admin
 end
-
-
